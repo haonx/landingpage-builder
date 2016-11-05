@@ -16,4 +16,12 @@ app.provider('$originObjects', function () {
             options: options
         });
     };
+    this.getObject = function (object_type) {
+        for (var i = 0; i < this.originObjects.length; i++) {
+            if (this.originObjects[i].type == object_type) {
+                return this.originObjects[i];
+            }
+        }
+        return false;
+    }
 });

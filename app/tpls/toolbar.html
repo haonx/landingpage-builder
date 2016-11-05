@@ -1,9 +1,9 @@
 <h4>Tools</h4>
 <span class="small text-muted">Drag and drop object to dropzone</span>
 <!-- The toolbox only allows to copy objects, not move it. -->
-<div ng-repeat="item in toolbar.originObjects"
-     dnd-draggable="item"
+<div ng-repeat="originObject in toolbar.originObjects"
+     dnd-draggable="originObject"
      data-dnd-effect-allowed="copy"
      data-dnd-copied="">
-    <button type="button" class="btn btn-default" style="margin-bottom:3px">{{item.type}}</button>
+    <button type="button" class="btn btn-default" style="margin-bottom:3px">{{originObject.type}}</button>
 </div>

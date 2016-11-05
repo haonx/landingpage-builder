@@ -24,7 +24,9 @@
             <div ng-repeat="dropzone in dropzones">
                 <div class="dropzone">
                     <h3>Dropzone {{dropzone.name}}</h3>
-                    <div ng-include="'app/tpls/list.html'"></div>
+                    <div dnd-list="dropzone.instanceObjects">
+                        <div ng-repeat="instanceObject in dropzone.instanceObjects" ng-include="'app/tpls/object-wrapper.html'"></div>
+                    </div>
                 </div>
             </div>
         </div>

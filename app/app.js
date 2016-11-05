@@ -6,8 +6,12 @@ app
         scope.toolbar.originObjects = $originObjects.getAll();
         scope.dropzones = [
             {
+                'name': 'A',
+                instanceObjects:[]
+            },
+            {
                 'name': 'B',
-                'list': [
+                instanceObjects: [
                     scope.toolbar.originObjects[0],
                     scope.toolbar.originObjects[1],
                     scope.toolbar.originObjects[2]
