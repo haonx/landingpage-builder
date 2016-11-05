@@ -6,8 +6,9 @@ app
         scope.toolbar.originObjects = $originObjects.getAll();
         scope.dropzones = [
             {
-                'name': 'A',
-                instanceObjects:[]
+                'name': 'Image only, please',
+                instanceObjects: [],
+                allowedTypes: ['image']
             },
             {
                 'name': 'B',
@@ -15,7 +16,8 @@ app
                     scope.toolbar.originObjects[0],
                     scope.toolbar.originObjects[1],
                     scope.toolbar.originObjects[2]
-                ]
+                ],
+                allowedTypes: $originObjects.getALlObjectTypes()
             }
         ];
     })

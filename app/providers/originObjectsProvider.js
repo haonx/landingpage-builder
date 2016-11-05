@@ -5,6 +5,11 @@ app.provider('$originObjects', function () {
         return {
             getAll: function () {
                 return originObjects
+            },
+            getALlObjectTypes: function () {
+                return originObjects.map(function (originObject) {
+                    return originObject.type;
+                })
             }
         }
     };
@@ -23,5 +28,5 @@ app.provider('$originObjects', function () {
             }
         }
         return false;
-    }
+    };
 });

@@ -24,8 +24,14 @@
             <div ng-repeat="dropzone in dropzones">
                 <div class="dropzone">
                     <h3>Dropzone {{dropzone.name}}</h3>
-                    <div dnd-list="dropzone.instanceObjects">
+                    <div dnd-list="dropzone.instanceObjects"
+                         dnd-allowed-types="dropzone.allowedTypes"
+                         style="padding: 20px;border:3px dashed #ccc">
                         <div ng-repeat="instanceObject in dropzone.instanceObjects" ng-include="'app/tpls/object-wrapper.html'"></div>
+
+                        <div class="dndPlaceholder">
+                            Drop any <strong>{{dropzone.allowedTypes.join(' or ')}}</strong> here
+                        </div>
                     </div>
                 </div>
             </div>
