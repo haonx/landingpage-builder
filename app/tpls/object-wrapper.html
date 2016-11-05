@@ -1,8 +1,8 @@
 <div
         dnd-draggable="instanceObject"
         dnd-type="instanceObject.type"
-        data-dnd-effect-allowed="move moveCopy"
-        data-dnd-moved="dropzone.instanceObjects.splice($index, 1)"
+        data-dnd-effect-allowed="copy"
+        data-dnd-copied="dropzone.instanceObjects.splice($index, 1)"
         ng-mouseover="isActionIconsShow=true"
         ng-mouseleave="isActionIconsShow=false"
         style="position: relative;"
@@ -14,4 +14,5 @@
         </div>
     </dnd-nodrag>-->
     <div ng-if="instanceObject.templateUrl" ng-include="instanceObject.templateUrl"></div>
+    <button ng-if="!instanceObject.templateUrl" type="button" class="btn btn-default" style="margin-bottom:3px">{{originObject.type}}</button>
 </div>

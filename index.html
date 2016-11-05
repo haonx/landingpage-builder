@@ -29,7 +29,7 @@
                          style="padding: 20px;border:3px dashed #ccc">
                         <div ng-repeat="instanceObject in dropzone.instanceObjects" ng-include="'app/tpls/object-wrapper.html'"></div>
 
-                        <div class="dndPlaceholder">
+                        <div class="dndPlaceholder" style="padding: 20px;background: #eeeeee;">
                             Drop any <strong>{{dropzone.allowedTypes.join(' or ')}}</strong> here
                         </div>
                     </div>
