@@ -1,0 +1,18 @@
+<div dnd-list="dropzone.list" style="border: 1px dashed #cccccc;padding: 3px;">
+    <div ng-repeat="item in dropzone.list"
+         dnd-draggable="item"
+         dnd-effect-allowed="move"
+         dnd-moved="dropzone.list.splice($index, 1)"
+         ng-mouseover="isActionIconsShow=true"
+         ng-mouseleave="isActionIconsShow=false"
+         style="position: relative;"
+    >
+        <dnd-nodrag>
+            <div ng-if="isActionIconsShow" style="position: absolute;z-index: 9999;" class="">
+                <span dnd-handle class=" glyphicon glyphicon-move"></span>
+                <span ng-click="dropzone.list.splice($index, 1)" class=" glyphicon glyphicon-trash"></span>
+            </div>
+            <div ng-if="item.templateUrl" ng-include="item.templateUrl"></div>
+        </dnd-nodrag>
+    </div>
+</div>

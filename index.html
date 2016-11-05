@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/readable/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/1.4.0/angular-drag-and-drop-lists.min.js"></script>
+    <!---->
+    <script src="app/app.js"></script>
+    <script src="app/constants/tinymce_default_options.js"></script>
+    <script src="app/providers/originObjectsProvider.js"></script>
+    <script src="app/configs/haonx.js"></script>
+    <!---->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.4.3/tinymce.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/angular-ui/ui-tinymce/master/src/tinymce.js"></script>
+
+</head>
+<body ng-app="landingPageBuilderApp" ng-controller="landingPageBuilderMainController">
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <div ng-repeat="dropzone in dropzones">
+                <div class="dropzone">
+                    <h3>Dropzone {{dropzone.name}}</h3>
+                    <div ng-include="'app/tpls/list.html'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2" ng-include="'app/tpls/toolbar.html'"></div>
+    </div>
+</div>
+</body>
+</html>
