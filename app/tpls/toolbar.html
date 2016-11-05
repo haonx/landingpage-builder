@@ -5,6 +5,9 @@
      dnd-draggable="originObject"
      dnd-type="originObject.type"
      data-dnd-effect-allowed="copy"
-     data-dnd-copied="">
+     data-dnd-copied=""
+     dnd-dragstart="dnd.objectTypeDragging=originObject.type"
+     dnd-dragend="dnd.objectTypeDragging=''"
+>
     <button type="button" class="btn btn-default" style="margin-bottom:3px">{{originObject.type}}</button>
 </div>

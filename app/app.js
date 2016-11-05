@@ -20,6 +20,8 @@ app
                 allowedTypes: $originObjects.getALlObjectTypes()
             }
         ];
+        scope.dnd={};
+        scope.dnd.objectTypeDragging='';
     })
 ;
 app.filter('stripTags', function () {
