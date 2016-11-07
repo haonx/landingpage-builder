@@ -21,12 +21,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10">
-            <div ng-repeat="dropzone in dropzones">
+            <div ng-repeat="dropzone in dnd.dropzones">
                 <div class="dropzone">
                     <h3>Dropzone {{dropzone.name}}</h3>
                     <div dnd-list="dropzone.instanceObjects"
                          dnd-allowed-types="dropzone.allowedTypes"
-                         ng-style="dnd.objectTypeDragging ?{'border':'3px dashed #ccc'} :{}"
+                         ng-style="(dropzone.allowedTypes.indexOf(dnd.objectTypeDragging) > -1) ?{'border':'3px dashed #ccc'} :{}"
                          style="padding: 20px;">
                         <div ng-repeat="instanceObject in dropzone.instanceObjects" ng-include="'app/tpls/object-wrapper.html'"></div>
 

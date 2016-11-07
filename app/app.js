@@ -2,9 +2,9 @@ app = angular.module('landingPageBuilderApp', ['dndLists', 'ui.tinymce']);
 app
     .controller('landingPageBuilderMainController', function ($scope, $originObjects) {
         var scope = $scope;
-        scope.toolbar = {};
-        scope.toolbar.originObjects = $originObjects.getAll();
-        scope.dropzones = [
+        scope.dnd = {};
+        scope.dnd.originObjects = $originObjects.getAll();
+        scope.dnd.dropzones = [
             {
                 'name': 'Image only, please',
                 instanceObjects: [],
@@ -13,14 +13,13 @@ app
             {
                 'name': 'B',
                 instanceObjects: [
-                    scope.toolbar.originObjects[0],
-                    scope.toolbar.originObjects[1],
-                    scope.toolbar.originObjects[2]
+                    scope.dnd.originObjects[0],
+                    scope.dnd.originObjects[1],
+                    scope.dnd.originObjects[2]
                 ],
-                allowedTypes: $originObjects.getALlObjectTypes()
+                allowedTypes: $originObjects.getAllObjectTypes()
             }
         ];
-        scope.dnd={};
         scope.dnd.objectTypeDragging='';
     })
 ;

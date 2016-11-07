@@ -6,7 +6,7 @@ app.provider('$originObjects', function () {
             getAll: function () {
                 return originObjects
             },
-            getALlObjectTypes: function () {
+            getAllObjectTypes: function () {
                 return originObjects.map(function (originObject) {
                     return originObject.type;
                 })
