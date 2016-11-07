@@ -33,6 +33,8 @@ app.config(function ($originObjectsProvider, TINYMCE_DEFAULT_OPTIONS) {
 //HORIZONTAL LINE
 app.config(function ($originObjectsProvider) {
     $originObjectsProvider.registerObject('hr');
+}).run(function ($templateCache) {
+    $templateCache.put('app/tpls/originObjects/hr.html','<hr>');
 });
 
 //FORM

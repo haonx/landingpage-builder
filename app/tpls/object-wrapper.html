@@ -5,13 +5,13 @@
         data-dnd-moved="dropzone.instanceObjects.splice($index, 1)"
         ng-mouseover="isActionIconsShow=true"
         ng-mouseleave="isActionIconsShow=false"
-        style="position: relative;"
+        style="position: relative;padding:18px;"
 >
-    <!--<dnd-nodrag>
+    <dnd-nodrag>
         <div ng-if="isActionIconsShow" style="position: absolute;z-index: 9999;" class="">
             <span dnd-handle class=" glyphicon glyphicon-move"></span>
             <span ng-click="dropzone.objects.splice($index, 1)" class=" glyphicon glyphicon-trash"></span>
         </div>
-    </dnd-nodrag>-->
+    </dnd-nodrag>
     <div ng-if="instanceObject.templateUrl" ng-include="instanceObject.templateUrl"></div>
 </div>
