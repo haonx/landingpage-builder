@@ -21,13 +21,13 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10">
-            <iframe src="template-source.html" frameborder="0" width="100%" height="700px"></iframe>
-            <!--<div ng-repeat="dropzone in dnd.dropzones">
+            <div ng-repeat="dropzone in dnd.dropzones">
                 <div class="dropzone">
                     <h3>Dropzone {{dropzone.name}}</h3>
                     <div dnd-list="dropzone.instanceObjects"
                          dnd-allowed-types="dropzone.allowedTypes"
                          ng-style="(dropzone.allowedTypes.indexOf(dnd.objectTypeDragging) > -1) ?{'border':'3px dashed #ccc'} :{}"
+                         dnd-external-sources="true"
                          style="padding: 20px;">
                         <div ng-repeat="instanceObject in dropzone.instanceObjects" ng-include="'app/tpls/object-wrapper.html'"></div>
 
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
         <div class="col-md-2" ng-include="'app/tpls/toolbar.html'"></div>
     </div>
