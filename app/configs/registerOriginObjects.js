@@ -46,8 +46,8 @@ app.config(function ($originObjectsProvider, TINYMCE_DEFAULT_OPTIONS) {
     $originObjectsProvider.registerObject('form', {
         tinymceOptions: tinymceOptions,
         childrenObjects: [
-            $originObjectsProvider.getObject('text'),
-            $originObjectsProvider.getObject('button')
+            $originObjectsProvider.create('text'),
+            $originObjectsProvider.create('button')
         ]
     });
 });
